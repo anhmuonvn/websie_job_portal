@@ -40,5 +40,8 @@ Route::group(['account'],function(){
         Route::get("/account/logout", [AccountController::class,"logout"])->name("account.logout");
         Route::put("/account/update-profile", [AccountController::class,"updateProfile"])->name("account.updateProfile");
         Route::post("/account/update-profile-pic", [AccountController::class,"updateProfilePic"])->name("account.updateProfilePic");
+        Route::get("/account/create-job", [AccountController::class,"createJob"])->name("account.createJob");
+        Route::post("/account/save-job", [AccountController::class,"saveJob"])->name("account.saveJob");
+        Route::get("/account/my-jobs", [AccountController::class,"myJobs"])->name("account.myJobs");
     });
 });
